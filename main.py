@@ -6,4 +6,6 @@ from PIL import Image                               # downloading, visualizing t
 import requests                                     # getting requests from URLs. We use this to get images from user.
 
 
-print("module detections")
+# loading/downloading the images from the internet. using requests
+original = Image.open(requests.get('https://www.thestatesman.com/wp-content/uploads/2019/07/pan-card.jpg', stream=True).raw)
+tampered = Image.open(requests.get('https://assets1.cleartax-cdn.com/s/img/20170526124335/Pan4.png', stream=True).raw)
