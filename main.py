@@ -16,3 +16,12 @@ print("tampered image size:", tampered.size)
 
 print("original image format:", original.format)
 print("tampered image format:", tampered.format)
+
+# changing the image size and format
+original = original.resize((250, 160))
+print(original.size)
+original.save('venv/pan_card_tampering/image/original.png')
+
+tampered = tampered.resize((250, 160))
+print(tampered.size)
+original.save('venv/pan_card_tampering/image/tampered.png')
