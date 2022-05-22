@@ -32,3 +32,7 @@ tampered.save('venv/pan_card_tampering/image/tampered.png')
 
 original.show()
 tampered.show()
+
+# load the two images to cv2
+original = cv2.imread('venv/pan_card_tampering/image/original.png')
+tampered = cv2.imread('venv/pan_card_tampering/image/tampered.png')
