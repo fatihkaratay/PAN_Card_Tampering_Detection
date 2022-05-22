@@ -25,3 +25,10 @@ original.save('venv/pan_card_tampering/image/original.png')
 tampered = tampered.resize((250, 160))
 print(tampered.size)
 original.save('venv/pan_card_tampering/image/tampered.png')
+
+# Change image type if required from png to jpg
+tampered = Image.open('venv/pan_card_tampering/image/tampered.png')
+tampered.save('venv/pan_card_tampering/image/tampered.png')
+
+original.show()
+tampered.show()
