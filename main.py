@@ -73,3 +73,7 @@ Image.fromarray(diff)
 # Display threshold image with white
 print("Threshold Image")
 Image.fromarray(thresh)
+
+'''
+if SSIM is ~31.2% we can say that the image is fake or tampered.
+'''
