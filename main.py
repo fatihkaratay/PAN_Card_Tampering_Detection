@@ -69,3 +69,7 @@ Image.fromarray(tampered)
 # Display difference image with black
 print("Different Image")
 Image.fromarray(diff)
+
+# Display threshold image with white
+print("Threshold Image")
+Image.fromarray(thresh)
