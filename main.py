@@ -45,3 +45,8 @@ tampered_gray = cv2.cvtColor(tampered, cv2.COLOR_BGR2GRAY)
 (score, diff) = structural_similarity(original_gray, tampered_gray, full=True)
 diff = (diff * 255).astype("uint8")
 print("SSIM: {}".format(score))
+
+# calculating thresholds and contours
+thresh = cv2.threshold(diff, 0, 255, cv2.THRESH_BINARY_INV | cv2.THRESH_OTSU)[1]
+cnts = cv2.findContours(thresh.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+cnts = imutils.grab_contours(cnts)
