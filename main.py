@@ -30,8 +30,8 @@ original.save('venv/pan_card_tampering/image/tampered.png')
 tampered = Image.open('venv/pan_card_tampering/image/tampered.png')
 tampered.save('venv/pan_card_tampering/image/tampered.png')
 
-original.show()
-tampered.show()
+# original.show()
+# tampered.show()
 
 # load the two images to cv2
 original = cv2.imread('venv/pan_card_tampering/image/original.png')
@@ -65,3 +65,7 @@ Image.fromarray(original)
 # Display tampered image with contour
 print("Tampered Image")
 Image.fromarray(tampered)
+
+# Display difference image with black
+print("Different Image")
+Image.fromarray(diff)
