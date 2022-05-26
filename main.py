@@ -57,3 +57,11 @@ for c in cnts:
     (x, y, w, h) = cv2.boundingRect(c)
     cv2.rectangle(original, (x, y), (x + w, y + h), (0, 0, 255), 2)
     cv2.rectangle(tampered, (x, y), (x + w, y + h), (0, 0, 255), 2)
+
+# display original image with contour
+print("original Format Image")
+Image.fromarray(original)
+
+# Display tampered image with contour
+print("Tampered Image")
+Image.fromarray(tampered)
